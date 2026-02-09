@@ -1,0 +1,21 @@
+[package]
+name = "commit-reveal"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.70"
+description = "SHA256-based commit-reveal scheme for fair P2P verification"
+license = "MIT OR Apache-2.0"
+repository = "https://codeberg.org/caniko/rs-commit-reveal"
+readme = "README.md"
+keywords = ["commit-reveal", "cryptography", "p2p", "fairness", "sha256"]
+categories = ["cryptography", "network-programming"]
+exclude = ["CLAUDE.md"]
+
+[features]
+default = ["serde"]
+serde = ["dep:serde"]
+
+[dependencies]
+rand = "0.9"
+sha2 = "0.10"
+serde = { version = "1.0", features = ["derive"], optional = true }
