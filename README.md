@@ -39,6 +39,10 @@ assert!(Commitment::verify(&hash_to_send, payload, nonce));
 
 - **`serde`** (default) -- enables `Serialize`/`Deserialize` on `Commitment`
 
+## CI
+
+Woodpecker CI on Codeberg runs `cargo build`, `cargo test`, `cargo clippy`, and `cargo fmt --check` on every push and pull request.
+
 ## License
 
 Licensed under either of [Apache License, Version 2.0](LICENSE-APACHE) or

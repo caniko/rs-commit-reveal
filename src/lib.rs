@@ -38,7 +38,7 @@
 
 use std::fmt;
 
-use rand::Rng;
+use rand::RngExt;
 use sha2::{Digest, Sha256};
 
 /// A commitment binding an arbitrary byte payload to a SHA256 hash via a random nonce.
