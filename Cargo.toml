@@ -9,7 +9,7 @@ repository = "https://codeberg.org/caniko/rs-commit-reveal"
 readme = "README.md"
 keywords = ["commit-reveal", "cryptography", "p2p", "fairness", "sha256"]
 categories = ["cryptography", "network-programming"]
-exclude = ["CLAUDE.md"]
+exclude = ["AGENTS.md"]
 
 [features]
 default = ["serde"]
