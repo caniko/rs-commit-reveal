@@ -1,0 +1,45 @@
+[site]
+title = "commit-reveal"
+description = "SHA256-based [commit-reveal scheme](https://en.wikipedia.org/wiki/Commitment_scheme)"
+base_url = "/"
+footer_note = "Generated from repository metadata by the plinth-project FOSS sweep."
+
+[[nav]]
+label = "Overview"
+href = "#overview"
+
+[[nav]]
+label = "Source"
+href = "ssh://git@codeberg.org/caniko/rs-commit-reveal.git"
+
+[[footer_links]]
+label = "Source"
+href = "ssh://git@codeberg.org/caniko/rs-commit-reveal.git"
+
+[[pages]]
+slug = "index"
+title = "commit-reveal"
+description = "SHA256-based [commit-reveal scheme](https://en.wikipedia.org/wiki/Commitment_scheme)"
+
+[[pages.sections]]
+type = "hero"
+title = "commit-reveal"
+tagline = "SHA256-based [commit-reveal scheme](https://en.wikipedia.org/wiki/Commitment_scheme)"
+subtitle = "SHA256-based [commit-reveal scheme](https://en.wikipedia.org/wiki/Commitment_scheme)"
+
+[[pages.sections.ctas]]
+label = "View source"
+href = "ssh://git@codeberg.org/caniko/rs-commit-reveal.git"
+primary = true
+
+[[pages.sections]]
+type = "feature_grid"
+id = "overview"
+
+[[pages.sections.features]]
+title = "Rust"
+description = "Project technology detected from repository manifests."
+
+[[pages.sections.features]]
+title = "Nix"
+description = "Project technology detected from repository manifests."
