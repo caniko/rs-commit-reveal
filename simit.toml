@@ -1,0 +1,9 @@
+[ci]
+provider = "actions"
+platform = "forgejo"
+runtime = "nix"
+runner = "atlas-nix-trusted"
+
+[ci.pages]
+repo = "caniko/rs-commit-reveal"
+source_branch = "main"

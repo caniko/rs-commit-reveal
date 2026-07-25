@@ -1,5 +1,11 @@
 # commit-reveal
 
+<!-- simit:badges:start -->
+
+[![CI](https://img.shields.io/badge/CI-managed-2088ff)](.forgejo/workflows/ci.yaml) [![crates.io](https://img.shields.io/badge/crates.io-ready-f46623)](https://crates.io/crates/commit-reveal)
+
+<!-- simit:badges:end -->
+
 SHA256-based [commit-reveal scheme](https://en.wikipedia.org/wiki/Commitment_scheme)
 for fair peer-to-peer verification.
 
