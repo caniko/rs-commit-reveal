@@ -6,4 +6,4 @@ runner = "codefloe-global"
 
 [ci.pages]
 repo = "caniko/rs-commit-reveal"
-source_branch = "main"
+source_branch = "trunk"
