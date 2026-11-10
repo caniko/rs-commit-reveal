@@ -45,7 +45,9 @@ is enabled. That is the whole crate.
 
 No roadmap is documented. Recent history is tooling: Simit project
 configuration, generated CI workflows, Harbor input migration and GitHub/
-Codeberg host normalisation. Published as `commit-reveal` 0.1.1 on crates.io.
+Codeberg host normalisation. The crate is published on crates.io as
+`commit-reveal` (regicide resolves 0.1.0 from the registry); this manifest is at
+0.1.1, and the repository carries no publish workflow or release tag.
 
 ## Place in the fleet
 
