@@ -1,8 +1,7 @@
 [site]
 title = "commit-reveal"
-description = "SHA256-based [commit-reveal scheme](https://en.wikipedia.org/wiki/Commitment_scheme)"
+description = "A small Rust library for SHA256 commit-reveal: one party commits to a value with a hash and a random nonce, and the peer verifies the reveal without a trusted server."
 base_url = "/"
-footer_note = "Generated from repository metadata by the plinth-project FOSS sweep."
 
 [[nav]]
 label = "Overview"
@@ -10,26 +9,30 @@ href = "#overview"
 
 [[nav]]
 label = "Source"
-href = "ssh://git@github.com/caniko/rs-commit-reveal.git"
+href = "https://github.com/caniko/rs-commit-reveal"
+
+[[footer_links]]
+label = "crates.io"
+href = "https://crates.io/crates/commit-reveal"
 
 [[footer_links]]
 label = "Source"
-href = "ssh://git@github.com/caniko/rs-commit-reveal.git"
+href = "https://github.com/caniko/rs-commit-reveal"
 
 [[pages]]
 slug = "index"
 title = "commit-reveal"
-description = "SHA256-based [commit-reveal scheme](https://en.wikipedia.org/wiki/Commitment_scheme)"
+description = "A small Rust library for SHA256 commit-reveal: one party commits to a value with a hash and a random nonce, and the peer verifies the reveal without a trusted server."
 
 [[pages.sections]]
 type = "hero"
 title = "commit-reveal"
-tagline = "SHA256-based [commit-reveal scheme](https://en.wikipedia.org/wiki/Commitment_scheme)"
-subtitle = "SHA256-based [commit-reveal scheme](https://en.wikipedia.org/wiki/Commitment_scheme)"
+tagline = "Commit to a value before you reveal it"
+subtitle = "A Rust library for a SHA256 commit-reveal scheme: the generator sends a hash of the payload and a random 32-byte nonce, and the peer recomputes that digest once both are revealed."
 
 [[pages.sections.ctas]]
 label = "View source"
-href = "ssh://git@github.com/caniko/rs-commit-reveal.git"
+href = "https://github.com/caniko/rs-commit-reveal"
 primary = true
 
 [[pages.sections]]
@@ -37,9 +40,17 @@ type = "feature_grid"
 id = "overview"
 
 [[pages.sections.features]]
-title = "Rust"
-description = "Project technology detected from repository manifests."
+title = "Commit, then reveal"
+description = "Commitment::new draws a random 32-byte nonce and hashes the payload together with it into SHA256(payload || nonce). Only that digest crosses the wire first; the payload and nonce follow when the value is revealed."
 
 [[pages.sections.features]]
-title = "Nix"
-description = "Project technology detected from repository manifests."
+title = "Verify without a trusted server"
+description = "Commitment::verify recomputes the digest from a revealed payload and nonce and compares it with the commitment the peer already holds, so both sides reach the same accept or reject with no intermediary. Commitments are visible in hex through hash_hex for logs and messages."
+
+[[pages.sections.features]]
+title = "Serde on by default"
+description = "The default serde feature derives Serialize and Deserialize on Commitment, so a commitment travels in whatever serde format the protocol already speaks. Build with default features off to leave serde out entirely."
+
+[[pages.sections.features]]
+title = "One struct, two calls"
+description = "The library is a single file: a public Commitment holding payload, nonce and hash, plus the constructor and the verifier. There is no state to keep and nothing to configure, which keeps the scheme small enough for a dice roll between two peers."
